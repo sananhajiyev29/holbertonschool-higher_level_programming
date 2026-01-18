@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """Task 3: Rectangle with string representation.
 
-This module defines a Rectangle class with private width and height attributes,
-property getters and setters with validation, and methods to compute area,
-perimeter, and string representation using the '#' character.
+This module defines a Rectangle class with private width and height
+attributes, property getters and setters with validation, and methods to
+compute area, perimeter, and string representation using the '#' character.
 """
 
 
