@@ -70,7 +70,3 @@ class Rectangle:
             return ""
         lines = ["#" * self.__width for _ in range(self.__height)]
         return "\n".join(lines)
-
-    def __repr__(self):
-        """Return a string representation to recreate the rectangle."""
-        return f"{self.__class__.__name__}({self.__width}, {self.__height})"
