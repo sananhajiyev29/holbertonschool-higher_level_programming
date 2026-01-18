@@ -5,17 +5,15 @@ This module defines a Rectangle class with private width and height
 attributes, property getters and setters with validation, and methods to
 compute area, perimeter, and string representation using the '#' character.
 """
-
-
 class Rectangle:
-    """Rectangle class with width, height, area, perimeter, and string output."""
+    """Rectangle class with width and height attributes."""
 
     def __init__(self, width=0, height=0):
         """Initialize a new Rectangle instance.
 
         Args:
-            width (int): Width of the rectangle (default 0).
-            height (int): Height of the rectangle (default 0).
+            width (int): Width of rectangle (default 0)
+            height (int): Height of rectangle (default 0)
         """
         self.width = width
         self.height = height
@@ -50,23 +48,21 @@ class Rectangle:
 
     def area(self):
         """Return the area of the rectangle."""
-        return self.__width * self.__height
+        return self.width * self.height
 
     def perimeter(self):
-        """Return the perimeter of the rectangle.
-
-        If width or height is 0, perimeter is 0.
-        """
-        if self.__width == 0 or self.__height == 0:
+        """Return the perimeter of the rectangle."""
+        if self.width == 0 or self.height == 0:
             return 0
-        return 2 * (self.__width + self.__height)
+        return 2 * (self.width + self.height)
 
     def __str__(self):
-        """Return the rectangle as a string of '#' characters.
-
-        If width or height is 0, return an empty string.
-        """
-        if self.__width == 0 or self.__height == 0:
+        """Return string representation using '#' character."""
+        if self.width == 0 or self.height == 0:
             return ""
-        lines = ["#" * self.__width for _ in range(self.__height)]
+        lines = ["#" * self.width for _ in range(self.height)]
         return "\n".join(lines)
+
+    def __repr__(self):
+        """Return canonical string representation for reproduction."""
+        return "Rectangle({}, {})".format(self.width, self.height)
