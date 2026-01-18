@@ -1,20 +1,11 @@
 #!/usr/bin/python3
-"""Task 3: Rectangle with string representation.
+"""Task 3: Rectangle with string representation."""
 
-This module defines a Rectangle class with private width and height
-attributes, property getters and setters with validation, and methods to
-compute area, perimeter, and string representation using the '#' character.
-"""
 class Rectangle:
     """Rectangle class with width and height attributes."""
 
     def __init__(self, width=0, height=0):
-        """Initialize a new Rectangle instance.
-
-        Args:
-            width (int): Width of rectangle (default 0)
-            height (int): Height of rectangle (default 0)
-        """
+        """Initialize a new Rectangle instance."""
         self.width = width
         self.height = height
 
@@ -60,9 +51,4 @@ class Rectangle:
         """Return string representation using '#' character."""
         if self.width == 0 or self.height == 0:
             return ""
-        lines = ["#" * self.width for _ in range(self.height)]
-        return "\n".join(lines)
-
-    def __repr__(self):
-        """Return canonical string representation for reproduction."""
-        return "Rectangle({}, {})".format(self.width, self.height)
+        return "\n".join("#" * self.width for _ in range(self.height))
