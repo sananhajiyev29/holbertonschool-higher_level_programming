@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Task 4: Rectangle with eval-able repr."""
 
+
 class Rectangle:
     """Rectangle class with width and height attributes."""
 
@@ -55,4 +56,4 @@ class Rectangle:
 
     def __repr__(self):
         """Return a string that can be used with eval() to recreate the object."""
-        return f"Rectangle({self.width}, {self.height})"
+        return "Rectangle({}, {})".format(self.width, self.height)
